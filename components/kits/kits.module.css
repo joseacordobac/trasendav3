@@ -1,0 +1,184 @@
+.content{
+	padding: 32px 0px;
+	background: linear-gradient(0deg, rgba(255,255,255,1) 50%, var(--color--secondary) 50%);
+	margin-top: -2px;
+}
+
+.section_title{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.section_title *{
+	font-size: 35px;
+}
+
+.title_main{
+	padding: 10px 0px;
+}
+
+.title_sub{
+	padding: 15px 0px;
+	background-color: var(--color--primary);
+	margin-bottom:55px;
+}
+
+.columns{
+	display: flex;
+	max-width: 60%;
+	gap: 50px;
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+}
+
+.product{
+	border-radius: 12px;
+	background: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	overflow: hidden;
+	flex-basis: 100%;
+}
+
+.header{
+	height: 308px;
+	margin-bottom: -47px;
+	position: relative;
+}
+
+.header::after{
+	position: absolute;
+	content: '';
+	left: 0;
+	right: 0;
+	bottom: -8px;
+	height: 82px;
+	z-index: 2;
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 82%);
+}
+
+.img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+.tag{
+	position: absolute;
+	top: 13px;
+	left: 16px;
+	z-index: 1;
+	font-size: 13px;
+	transform: rotate(-25deg);
+	color: white;
+	border-radius: 71px;
+	height: 74px;
+	width: 74px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tag::before{
+	content: url(https://trasenda.co/wp-content/uploads/2023/03/Sitio-movil-3-06.png);
+	left: -5px;
+	position: absolute;
+	top: -3px;
+}
+
+.body{
+	height: 320px;
+	position: relative;
+	padding: 15px 0px;
+	z-index: 2;
+}
+
+.body_line{
+	padding: 5px 0px;
+	margin-top: -2px;
+}
+
+.title{
+	max-width: 90%;
+	margin: auto;
+	font-weight: 800;
+}
+
+h3.title{
+	margin-bottom: 15px;
+}
+
+.description{
+	margin: auto;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.description strong {
+	display: block;
+	font-weight: 761;
+	font-size: italic;
+}
+
+.description ul{
+	text-align: left;
+	margin: 12px 0px;
+}
+
+.description li{
+	padding: 6px 30px;
+}
+
+.description li:nth-child(even){
+	background-color: var(--color--quaternary);
+}
+
+.btn_susc{
+	text-align: center;
+	left: 0;
+	right: 0;
+	position: absolute;
+	bottom: 10px;
+	max-width: 243px;
+	margin: auto;
+	padding: 13px 0px;
+	border: none;
+	border-radius: 29px;
+	background: linear-gradient(0deg, rgba(241, 208, 162, 1) 0%, rgba(228, 155, 60, 1) 100%);
+	font-size: 20px;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+@media(max-width:780px){
+
+	.content{
+		background: linear-gradient(0deg, rgba(255,255,255,1) 80%, var(--color--secondary) 80%);
+	}
+
+	.header{
+		height: 210px;
+	}
+
+	.body{
+		height: 320px;
+	}
+
+	.columns{
+		flex-direction: column;
+    max-width: 82%;
+	}
+
+	.section_title, 
+	.section_title *{
+		font-size: 26px;
+	}
+
+	.description{
+		font-size: 14px;
+	}
+}
+
