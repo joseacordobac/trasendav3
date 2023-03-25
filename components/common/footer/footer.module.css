@@ -7,7 +7,7 @@
 	text-align: center;
 }
 
-.footer_logo{
+.footer_logo a{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
