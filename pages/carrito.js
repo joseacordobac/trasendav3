@@ -1,36 +1,28 @@
-import React, {useContext} from 'react';
-import cartContext from '@/context/cartContext';
 import Logo from '@/components/logo/logo';
+import Tokenization from '@/components/checkout/wompi/tokenization';
+import SimpleBuy from '@/components/checkout/wompi/simplebuy';
+import MyCart from '@/components/cart/cart';
+import UserForm from '@/components/checkout/wompi/userform';
+
+import s from '../styles/carrito.module.css'
+
 
 export default function Carrito() {
 	
-	const { cart, setCart } = useContext(cartContext)
-	const { title, price, unidades, total } = cart
-	
-	const envioCost = 12000;
-	const totales = envioCost + parseInt(price)
-	console.log(cart, 'carrito')
-
   return (
 		<>
 			<Logo/>
-			<div>
-				<div>
-					<ul>
-						<li>Producto:{title}</li>
-						<li>Precio:{price}</li>
-						<li>Unidades:{unidades}</li>
-						<li>Subtottal:{total}</li>
-					</ul>
+			<div className={s.contents}>
+				<div className={s.left}>
+					<UserForm/>
 				</div>
-				<div>
-					<ul><h2>Total carrito</h2>
-						<li>Subtotal:{total}</li>
-						<li>Envío:{envioCost}</li>
-						<li>Total:{totales}</li>
-					</ul>
+				<div className={s.right}>
+					<MyCart />
+					<div className={s.payments_options}>
+						<Tokenization />
+						<SimpleBuy/>
+					</div>
 				</div>
-				<button>Realizar pedido</button>
 			</div>
 		</>
   )

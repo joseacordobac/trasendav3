@@ -1,0 +1,16 @@
+.contents{
+	max-width: 85%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 48% 48%;
+	grid-gap: 4%;
+}
+
+.payments_options{
+	margin-top: 25px;
+	height: 200px;
+	display: flex;
+	gap: 13px;
+	flex-direction: column;
+}
+

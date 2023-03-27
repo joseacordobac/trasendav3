@@ -23,6 +23,7 @@ export default function Item({ product }) {
 
 		setCart({
 			id,
+			shipping:acf?.costo_total_de_envio,
 			title,
 			slug,
 			img,
